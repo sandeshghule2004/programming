@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming Basics Notes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+
+        header {
+            background: #1e293b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #334155;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        nav button:hover {
+            background: #475569;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #1e293b;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background: #1e293b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>💻 Programming Basics Notes</h1>
+    <p>HTML | CSS | JavaScript</p>
+</header>
+
+<nav>
+    <button onclick="showSection('intro')">Introduction</button>
+    <button onclick="showSection('html')">HTML</button>
+    <button onclick="showSection('css')">CSS</button>
+    <button onclick="showSection('js')">JavaScript</button>
+</nav>
+
+<section id="intro" class="active">
+    <h2>📘 What is Programming?</h2>
+    <p>
+        Programming is the process of giving instructions to a computer
+        to perform a specific task. These instructions are written using
+        programming languages.
+    </p>
+    <ul>
+        <li>Used to create websites, apps, games, software</li>
+        <li>Examples: C, C++, Java, Python, JavaScript</li>
+        <li>Helps solve real-world problems logically</li>
+    </ul>
+</section>
+
+<section id="html">
+    <h2>🌐 HTML Basics</h2>
+    <p>
+        HTML (HyperText Markup Language) is used to create the structure
+        of a webpage.
+    </p>
+
+    <h3>Basic HTML Structure</h3>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h3>Common HTML Tags</h3>
+    <ul>
+        <li>&lt;h1&gt; to &lt;h6&gt; – Headings</li>
+        <li>&lt;p&gt; – Paragraph</li>
+        <li>&lt;a&gt; – Link</li>
+        <li>&lt;img&gt; – Image</li>
+        <li>&lt;div&gt; – Container</li>
+    </ul>
+</section>
+
+<section id="css">
+    <h2>🎨 CSS Basics</h2>
+    <p>
+        CSS (Cascading Style Sheets) is used to style and design webpages.
+    </p>
+
+    <h3>CSS Syntax</h3>
+    <pre>
+selector {
+    property: value;
+}
+    </pre>
+
+    <h3>Example</h3>
+    <pre>
+h1 {
+    color: blue;
+    text-align: center;
+}
+    </pre>
+
+    <h3>Uses of CSS</h3>
+    <ul>
+        <li>Change colors and fonts</li>
+        <li>Responsive design</li>
+        <li>Layouts (Flexbox, Grid)</li>
+    </ul>
+</section>
+
+<section id="js">
+    <h2>⚙ JavaScript Basics</h2>
+    <p>
+        JavaScript is used to make webpages interactive and dynamic.
+    </p>
+
+    <h3>JavaScript Example</h3>
+    <pre>
+function greet() {
+    alert("Hello, Welcome to Programming!");
+}
+    </pre>
+
+    <button onclick="greet()">Click Me</button>
+
+    <h3>Uses of JavaScript</h3>
+    <ul>
+        <li>Form validation</li>
+        <li>Dynamic content</li>
+        <li>Games and animations</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 Programming Basics | Student Notes</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(section => section.classList.remove("active"));
+        document.getElementById(sectionId).classList.add("active");
+    }
+
+    function greet() {
+        alert("Hello! You just used JavaScript 🎉");
+    }
+</script>
+
+</body>
+</html>
